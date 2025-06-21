@@ -1,0 +1,145 @@
+.skill-highlights {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(26,115,232,0.07);
+  padding: 32px;
+  margin: 32px auto;
+  max-width: 900px;
+}
+
+.skill-highlights h2 {
+  color: #1a73e8;
+  margin-bottom: 18px;
+}
+
+.highlight-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: space-between;
+}
+
+.highlight-card {
+  background: #f0f4f9;
+  border-radius: 10px;
+  box-shadow: 0 1px 8px rgba(26,115,232,0.04);
+  padding: 24px 18px;
+  flex: 1 1 260px;
+  min-width: 230px;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.highlight-icon {
+  font-size: 2.2em;
+  color: #1a73e8;
+  margin-bottom: 8px;
+}
+
+.highlight-card h3 {
+  color: #1761c7;
+  margin: 0 0 4px 0;
+  font-size: 1.1em;
+}
+
+.highlight-card p {
+  color: #333;
+  font-size: 0.97em;
+  margin: 0 0 8px 0;
+}
+
+.highlight-card button {
+  background: #1a73e8;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: background 0.2s;
+}
+.highlight-card button:disabled {
+  background: #b3c7e6;
+  cursor: not-allowed;
+}
+.highlight-card button:hover:not(:disabled) {
+  background: #1761c7;
+}
+
+.highlight-result {
+  margin-top: 8px;
+  color: #188038;
+  background: #e8f5e9;
+  border-radius: 5px;
+  padding: 6px 10px;
+  font-size: 0.98em;
+  white-space: pre-line;
+}
+
+/* Chatbot styles */
+.chatbot-box {
+  width: 100%;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(26,115,232,0.04);
+  padding: 8px;
+  margin-bottom: 4px;
+}
+.chat-log {
+  height: 82px;
+  overflow-y: auto;
+  font-size: 0.98em;
+  margin-bottom: 6px;
+}
+.chat-log .bot {
+  color: #1a73e8;
+}
+.chat-log .user {
+  color: #444;
+  text-align: right;
+}
+.chat-input-row {
+  display: flex;
+  gap: 6px;
+}
+.chat-input-row input {
+  flex: 1;
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid #e0e7ef;
+  font-size: 1em;
+}
+.chat-input-row button {
+  padding: 6px 14px;
+  font-size: 0.97em;
+}
+
+@media (max-width: 900px) {
+  .highlight-grid {
+    flex-direction: column;
+    gap: 14px;
+    align-items: stretch;
+  }
+  .highlight-card {
+    max-width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .skill-highlights {
+    padding: 12px;
+    margin: 10px 2px;
+    max-width: 99vw;
+  }
+  .highlight-card {
+    padding: 14px 6px;
+    font-size: 0.97em;
+  }
+  .highlight-icon {
+    font-size: 1.3em;
+  }
+}
