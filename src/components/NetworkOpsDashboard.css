@@ -1,0 +1,184 @@
+.network-ops-dashboard {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(26,115,232,0.07);
+  padding: 32px;
+  margin: 32px auto;
+  max-width: 900px;
+}
+
+.network-ops-dashboard h2 {
+  color: #1a73e8;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dashboard-grid {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.topology-section, .dss-section {
+  flex: 1 1 340px;
+  min-width: 300px;
+  background: #f0f4f9;
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0 1px 8px rgba(26,115,232,0.04);
+}
+
+.topology-section h3, .dss-section h3 {
+  color: #1761c7;
+  margin-bottom: 16px;
+}
+
+.topology-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.device-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(26,115,232,0.06);
+  padding: 12px 16px;
+  font-size: 1em;
+}
+.device-card.online {
+  border-left: 4px solid #34a853;
+}
+.device-card.offline {
+  border-left: 4px solid #ea4335;
+  opacity: 0.7;
+}
+.device-icon {
+  font-size: 2em;
+  margin-right: 8px;
+}
+.device-card button {
+  background: #1a73e8;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 12px;
+  font-size: 0.95em;
+  margin-top: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.device-card button:hover {
+  background: #1761c7;
+}
+
+.add-device-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.add-device-form input,
+.add-device-form select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #e0e7ef;
+  font-size: 1em;
+}
+.add-device-form button {
+  background: #34a853;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.add-device-form button:hover {
+  background: #188038;
+}
+
+.analytics-cards {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+.analytics-card {
+  flex: 1;
+  background: #fff;
+  border-radius: 8px;
+  padding: 14px 0;
+  text-align: center;
+  font-size: 1.08em;
+  box-shadow: 0 1px 4px rgba(26,115,232,0.04);
+}
+.analytics-card.online {
+  border-left: 4px solid #34a853;
+}
+.analytics-card.offline {
+  border-left: 4px solid #ea4335;
+}
+.dss-alerts {
+  margin-top: 10px;
+}
+.alert {
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-bottom: 5px;
+  font-size: 1em;
+}
+.alert-warning {
+  background: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+}
+.alert-success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+@media (max-width: 900px) {
+  .dashboard-grid {
+    flex-direction: column;
+    gap: 18px;
+  }
+}
+@media (max-width: 600px) {
+  .network-ops-dashboard {
+    padding: 12px;
+    margin: 10px 2px;
+    max-width: 99vw;
+  }
+  .topology-section, .dss-section {
+    padding: 12px;
+    min-width: 0;
+  }
+  .add-device-form {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .analytics-cards {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .device-card {
+    flex-direction: column;
+    gap: 6px;
+    font-size: 0.98em;
+  }
+  .device-icon {
+    font-size: 1.4em;
+  }
+}

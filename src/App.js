@@ -6,6 +6,7 @@ import Experience from './components/Experience';
 import Projects from './components/Projects';
 import DownloadCV from './components/DownloadCV';
 import Contact from './components/Contact';
+import NetworkOpsDashboard from './components/NetworkOpsDashboard';
 import './App.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <AnimatedSkills />
       <Experience />
       <Projects />
+      <NetworkOpsDashboard />
       <DownloadCV />
       <Contact />
     </div>
