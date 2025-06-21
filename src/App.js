@@ -1,4 +1,5 @@
 import React from 'react';
+import NavBar from './components/NavBar';
 import Hero from './components/Hero';
 import About from './components/About';
 import AnimatedSkills from './components/AnimatedSkills';
@@ -13,15 +14,15 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Hero />
-      <About />
-      <AnimatedSkills />
-      <Experience />
-      <Projects />
-      <SkillHighlights />
-      <NetworkOpsDashboard />
-      <DownloadCV />
-      <Contact />
+      <NavBar />
+      <section id="home"><Hero /></section>
+      <section id="skills"><AnimatedSkills /></section>
+      <section id="experience"><Experience /></section>
+      <section id="projects"><Projects /></section>
+      <section id="skillhighlights"><SkillHighlights /></section>
+      <section id="dashboard"><NetworkOpsDashboard /></section>
+      <section id="downloadcv"><DownloadCV /></section>
+      <section id="contact"><Contact /></section>
     </div>
   );
 }

@@ -1,13 +1,180 @@
-.hero {
+.hero.revamp-hero-bg {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 32px;
-  background: linear-gradient(90deg, #e0e7ff 0%, #f8fafc 100%);
-  border-radius: 18px;
-  padding: 32px 24px;
-  margin-bottom: 32px;
-  box-shadow: 0 2px 16px rgba(26,115,232,0.07);
+  gap: 40px;
+  background: linear-gradient(120deg, #e0e7ff 0%, #f8fafc 60%, #fff 100%);
+  border-radius: 24px;
+  padding: 48px 36px 0 36px;
+  margin-bottom: 38px;
+  box-shadow: 0 4px 32px rgba(26,115,232,0.09);
+  overflow: hidden;
+  min-height: 320px;
 }
+
+.hero-wave {
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 90px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-avatar-frame {
+  background: linear-gradient(135deg, #fff 60%, #e0e7ff 100%);
+  border-radius: 50%;
+  box-shadow: 0 4px 24px rgba(26,115,232,0.13);
+  padding: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 140px;
+  min-height: 140px;
+  z-index: 2;
+}
+
+.hero-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #1a73e8;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(26,115,232,0.08);
+}
+
+.hero-content {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-name {
+  margin: 0 0 3px 0;
+  font-size: 2.6rem;
+  color: #1a73e8;
+  font-weight: 800;
+  letter-spacing: -1px;
+  text-shadow: 0 2px 8px rgba(26,115,232,0.05);
+}
+
+.hero-animated-headline {
+  margin: 0 0 10px 0;
+  font-size: 1.35rem;
+  color: #333;
+  font-family: 'Fira Mono', 'Menlo', monospace;
+  min-height: 1.7em;
+  display: flex;
+  align-items: center;
+}
+.hero-cursor {
+  color: #1a73e8;
+  font-weight: bold;
+  margin-left: 2px;
+  animation: blink 1.1s steps(1) infinite;
+}
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.hero-intro {
+  margin: 8px 0 0 0;
+  color: #444;
+  font-size: 1.08em;
+  max-width: 430px;
+}
+
+.cv-button, .big-cv-btn {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 14px 32px;
+  background: linear-gradient(90deg, #1a73e8 60%, #1761c7 100%);
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.08rem;
+  box-shadow: 0 2px 12px rgba(26, 115, 232, 0.10);
+  transition: background 0.2s, box-shadow 0.2s;
+  border: none;
+}
+.cv-button:hover, .big-cv-btn:hover {
+  background: linear-gradient(90deg, #1761c7 60%, #1a73e8 100%);
+  box-shadow: 0 4px 20px rgba(26,115,232,0.14);
+}
+
+@media (max-width: 900px) {
+  .hero.revamp-hero-bg {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px 10px 0 10px;
+    gap: 18px;
+    min-height: 220px;
+  }
+  .hero-avatar-frame {
+    min-width: 110px;
+    min-height: 110px;
+    padding: 4px;
+  }
+  .hero-avatar {
+    width: 90px;
+    height: 90px;
+  }
+  .hero-content {
+    align-items: flex-start;
+  }
+  .hero-name {
+    font-size: 2rem;
+  }
+  .hero-animated-headline {
+    font-size: 1.05rem;
+  }
+  .cv-button, .big-cv-btn {
+    padding: 12px 18px;
+    font-size: 0.99rem;
+  }
+}
+@media (max-width: 600px) {
+  .hero.revamp-hero-bg {
+    padding: 14px 2px 0 2px;
+    margin-bottom: 18px;
+    border-radius: 10px;
+    min-height: 120px;
+  }
+  .hero-avatar-frame {
+    min-width: 72px;
+    min-height: 72px;
+    padding: 2px;
+  }
+  .hero-avatar {
+    width: 54px;
+    height: 54px;
+    border-width: 2px;
+  }
+  .hero-content {
+    align-items: flex-start;
+  }
+  .hero-name {
+    font-size: 1.1rem;
+  }
+  .hero-animated-headline {
+    font-size: 0.93rem;
+  }
+  .cv-button, .big-cv-btn {
+    padding: 8px 12px;
+    font-size: 0.93rem;
+    border-radius: 6px;
+  }
+  .hero-intro {
+    font-size: 0.96em;
+    max-width: 98vw;
+  }
+}
+
 
 .hero-avatar {
   width: 120px;
