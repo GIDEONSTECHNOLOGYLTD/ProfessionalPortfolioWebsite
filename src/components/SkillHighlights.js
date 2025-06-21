@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaTerminal, FaRobot, FaTools, FaPlayCircle, FaShieldAlt, FaInfoCircle } from 'react-icons/fa';
+import SaaSDemo from './SaaSDemo';
 import './SkillHighlights.css';
 
 function SkillHighlights() {
@@ -54,6 +55,16 @@ function SkillHighlights() {
         Try these interactive demos to see my top technical skills in action. Swipe or scroll on mobile!
       </div>
       <div className="highlight-carousel">
+        {/* SaaS Demo */}
+        <div className="highlight-card step0">
+          <div className="card-header" style={{background:'#f8fafc'}}>
+            <span className="step-label">SaaS</span> SaaS Demo
+          </div>
+          <div className="card-body">
+            <p>Try user management, plan toggling, and analytics—just like a real SaaS platform.</p>
+            <SaaSDemo />
+          </div>
+        </div>
         {/* 1. Network Troubleshooting */}
         <div className="highlight-card step1">
           <div className="card-header" style={{background:'#e3f2fd'}}>
