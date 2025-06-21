@@ -114,6 +114,49 @@
   font-size: 0.98em;
 }
 
+@media (max-width: 900px) {
+  .animated-skills {
+    padding: 12px;
+    margin: 10px 2px;
+    max-width: 99vw;
+  }
+  .skills-tabs {
+    position: sticky;
+    top: 60px;
+    background: #fff;
+    z-index: 10;
+    padding-top: 5px;
+  }
+  .skills-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 14px;
+    padding-bottom: 8px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .skill-bar {
+    min-width: 80vw;
+    max-width: 92vw;
+    font-size: 1.08em;
+    padding: 18px 10px;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    margin-bottom: 0;
+  }
+  .skill-icon {
+    font-size: 2em;
+  }
+  .bar-bg {
+    width: 80px;
+    height: 14px;
+  }
+  .skill-level {
+    font-size: 1.08em;
+    min-width: 28px;
+  }
+}
+
 @media (max-width: 600px) {
   .animated-skills {
     padding: 16px;
