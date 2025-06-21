@@ -45,12 +45,21 @@ function SkillBar({ skill }) {
 }
 
 function AnimatedSkills() {
+  const [tab, setTab] = React.useState('core');
+
   return (
     <section className="animated-skills">
       <h2>Skills</h2>
-      {skills.map((skill, idx) => <SkillBar skill={skill} key={idx} />)}
-      <h3 style={{marginTop: '2em', color: '#1761c7'}}>AI & Automation Skills</h3>
-      {aiSkills.map((skill, idx) => <SkillBar skill={skill} key={idx} />)}
+      <div className="skills-intro">
+        Explore my top technical skills. Switch between categories to see more!
+      </div>
+      <div className="skills-tabs">
+        <button className={tab==='core' ? 'active' : ''} onClick={()=>setTab('core')}>Core Skills</button>
+        <button className={tab==='ai' ? 'active' : ''} onClick={()=>setTab('ai')}>AI & Automation</button>
+      </div>
+      <div className="skills-grid">
+        {(tab==='core' ? skills : aiSkills).map((skill, idx) => <SkillBar skill={skill} key={idx} />)}
+      </div>
     </section>
   );
 }
