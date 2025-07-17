@@ -33,34 +33,70 @@ const aiSkills = [
   { name: 'AI Risk Management & Governance', level: 91, icon: <FaShieldAlt /> },
 ];
 
-function SkillBar({ skill }) {
+function SkillBar({ skill, expanded, toggleExpand }) {
   return (
-    <div className="skill-bar">
-      <span className="skill-icon">{skill.icon}</span>
-      <span className="skill-name">{skill.name}</span>
-      <div className="bar-bg">
-        <div className="bar-fill" style={{ width: skill.level + '%' }}></div>
+    <div className={`skill-bar ${expanded ? 'expanded' : ''}`} onClick={() => toggleExpand(skill.name)}>
+      <div className="skill-header">
+        <span className="skill-icon">{skill.icon}</span>
+        <span className="skill-name">{skill.name}</span>
+        <span className="expand-icon">{expanded ? '−' : '+'}</span>
       </div>
-      <span className="skill-level">{skill.level}%</span>
+      
+      {expanded && (
+        <div className="skill-details">
+          <div className="bar-bg">
+            <div className="bar-fill" style={{ width: skill.level + '%' }}></div>
+          </div>
+          <span className="skill-level">{skill.level}%</span>
+          <p className="skill-description">{skill.description || 'Enterprise-grade technology solutions designed for business growth and operational excellence.'}</p>
+        </div>
+      )}
     </div>
   );
 }
 
 function AnimatedSkills() {
   const [tab, setTab] = React.useState('core');
+  const [expandedSkills, setExpandedSkills] = React.useState({});
+
+  const toggleExpand = (skillName) => {
+    setExpandedSkills(prev => ({
+      ...prev,
+      [skillName]: !prev[skillName]
+    }));
+  };
 
   return (
     <section className="animated-skills">
       <h2>Our Services & Expertise</h2>
       <div className="skills-intro">
-        GideonsTechnology Ltd offers a comprehensive range of enterprise technology solutions and services. Explore our expertise areas below.
+        GideonsTechnology Ltd offers a comprehensive range of enterprise technology solutions and services. Click on any service below to learn more.
       </div>
       <div className="skills-tabs">
         <button className={tab==='core' ? 'active' : ''} onClick={()=>setTab('core')}>Enterprise Solutions</button>
         <button className={tab==='ai' ? 'active' : ''} onClick={()=>setTab('ai')}>AI & Advanced Analytics</button>
       </div>
-      <div className="skills-grid">
-        {(tab==='core' ? skills : aiSkills).map((skill, idx) => <SkillBar skill={skill} key={idx} />)}
+
+      <div className={`skills-container ${tab === 'core' ? 'visible' : 'hidden'}`}>
+        {skills.map((skill, index) => (
+          <SkillBar 
+            key={index} 
+            skill={skill} 
+            expanded={!!expandedSkills[skill.name]} 
+            toggleExpand={toggleExpand} 
+          />
+        ))}
+      </div>
+
+      <div className={`skills-container ${tab === 'ai' ? 'visible' : 'hidden'}`}>
+        {aiSkills.map((skill, index) => (
+          <SkillBar 
+            key={index} 
+            skill={skill} 
+            expanded={!!expandedSkills[skill.name]} 
+            toggleExpand={toggleExpand} 
+          />
+        ))}
       </div>
     </section>
   );

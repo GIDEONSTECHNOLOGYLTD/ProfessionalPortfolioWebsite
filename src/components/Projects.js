@@ -42,15 +42,26 @@ function Projects() {
   const [activeModal, setActiveModal] = useState(null);
 
   // Handler for case study request button
-  const handleCaseStudyRequest = (projectName) => {
+  const handleCaseStudyRequest = (projectName, e) => {
+    e.preventDefault(); // Prevent any default action
     setActiveModal(projectName);
-    // Smooth scroll to contact form
-    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
     
-    // Optionally, populate a hidden field or set some state that the contact form can use
-    if (window.localStorage) {
-      window.localStorage.setItem('requestedProject', projectName);
+    // Store the project name safely
+    try {
+      if (window.localStorage) {
+        window.localStorage.setItem('requestedProject', projectName);
+      }
+    } catch (err) {
+      console.log('Could not save to localStorage:', err);
     }
+    
+    // Safer scrolling with timeout to ensure modal is fully rendered first
+    setTimeout(() => {
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
   };
 
   // Close the modal
@@ -85,7 +96,7 @@ function Projects() {
                   <a href={project.url} target="_blank" rel="noopener noreferrer" className="view-project-btn">View Project</a>
                   <button 
                     className="project-cta" 
-                    onClick={() => handleCaseStudyRequest(project.name)}
+                    onClick={(e) => handleCaseStudyRequest(project.name, e)}
                   >
                     Request Details
                   </button>
@@ -93,7 +104,7 @@ function Projects() {
               ) : (
                 <button 
                   className="project-cta" 
-                  onClick={() => handleCaseStudyRequest(project.name)}
+                  onClick={(e) => handleCaseStudyRequest(project.name, e)}
                 >
                   Request Case Study
                 </button>
