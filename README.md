@@ -1,6 +1,23 @@
-# Getting Started with Create React App
+# Gideon Aina - Professional Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains the source code for my professional portfolio website, showcasing my experience, projects, and skills as a software and hardware engineer.
+
+## Features
+
+- Modern, responsive design
+- Interactive components and animations
+- Comprehensive display of skills and projects
+- Contact form integration
+- Downloadable CV
+- Network Operations Dashboard demo
+
+## Technologies Used
+
+- React
+- CSS3 with custom animations
+- Responsive design principles
+- Formspree for contact form submissions
+- Deployed on Render
 
 ## Available Scripts
 
