@@ -3,11 +3,11 @@ import './Hero.css';
 import avatar from '../avatar.png';
 
 const headlines = [
-  'Software Engineer',
-  'Network Specialist',
-  'DSS Enthusiast',
-  'Automation Expert',
-  'Tech Innovator'
+  'CEO & Tech Director',
+  'Software Architect',
+  'Solutions Provider',
+  'Digital Transformation Leader',
+  'Enterprise Technology Expert'
 ];
 
 function Hero() {
@@ -128,24 +128,24 @@ function Hero() {
       
       <div className="hero-content">
         <h1 className="hero-name">Gideon Aina</h1>
-        <div className="hero-badge">Owner & Lead Engineer at GideonsTechnology</div>
+        <div className="hero-badge">CEO & Founder • GideonsTechnology Ltd • Nigeria</div>
         <h2 className="hero-animated-headline">
           <span>{typed}</span>
           <span className="hero-cursor">|</span>
         </h2>
-        <p className="hero-intro">Hi, I'm Gideon — a passionate engineer blending software, network, and decision support skills to solve real-world problems. Welcome to my portfolio!</p>
+        <p className="hero-intro">Founder and CEO of GideonsTechnology Ltd, a Nigerian tech company providing software and network solutions. Currently working in Ghana on permit, specializing in enterprise technology solutions for businesses across West Africa.</p>
         <div className="hero-buttons">
           <a href="/Gideon_Aina_CV.pdf" className="cv-button big-cv-btn" download>
-            <span className="btn-text">Download CV</span>
-            <span className="btn-icon">📄</span>
+            <span className="btn-text">Company Profile</span>
+            <span className="btn-icon">📊</span>
           </a>
-          <a href="#contact" className="hero-contact-btn">Get in touch</a>
+          <a href="#contact" className="hero-contact-btn">Schedule Consultation</a>
         </div>
       </div>
       
       <div className="hero-scroll-indicator">
         <div className="scroll-icon"></div>
-        <p>Scroll to explore</p>
+        <p>Explore Our Services</p>
       </div>
     </section>
   );

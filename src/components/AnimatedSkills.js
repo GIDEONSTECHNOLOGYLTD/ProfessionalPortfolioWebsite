@@ -1,34 +1,36 @@
 import React from 'react';
 import './AnimatedSkills.css';
-import { FaRobot, FaTools, FaUsers, FaCogs, FaComments, FaChartBar } from 'react-icons/fa';
+import { FaRobot, FaUsers, FaCogs, FaComments, FaChartBar, FaLaptopCode, FaNetworkWired, FaServer, FaShieldAlt, FaCloudUploadAlt, FaProjectDiagram, FaHandshake, FaChartLine, FaBriefcase, FaGlobe } from 'react-icons/fa';
 
 const skills = [
-  { name: 'Computer Maintenance', level: 90, icon: <FaTools /> },
-  { name: 'Software as a Service (SaaS)', level: 80, icon: <FaCogs /> },
-  { name: 'Mobile Telephony', level: 85, icon: <FaChartBar /> },
-  { name: 'Equipment Repair', level: 88, icon: <FaTools /> },
-  { name: 'Software Installation', level: 87, icon: <FaCogs /> },
-  { name: 'Leadership', level: 75, icon: <FaUsers /> },
-  { name: 'Computer Hardware', level: 90, icon: <FaTools /> },
-  { name: 'Safety Practices', level: 80, icon: <FaCogs /> },
-  { name: 'Software Troubleshooting', level: 88, icon: <FaCogs /> },
-  { name: 'Account Management', level: 70, icon: <FaUsers /> },
-  { name: 'Attention to Detail', level: 85, icon: <FaUsers /> },
-  { name: 'Problem Solving', level: 90, icon: <FaCogs /> },
-  { name: 'Teamwork', level: 80, icon: <FaUsers /> },
-  { name: 'Functionality', level: 80, icon: <FaCogs /> },
-  { name: 'Power Tools', level: 75, icon: <FaTools /> },
-  { name: 'Customer Service', level: 82, icon: <FaComments /> },
-  { name: 'Communication', level: 85, icon: <FaComments /> },
+  { name: 'Enterprise Software Solutions', level: 95, icon: <FaLaptopCode /> },
+  { name: 'Cloud Infrastructure Management', level: 90, icon: <FaCloudUploadAlt /> },
+  { name: 'Network Security Architecture', level: 92, icon: <FaShieldAlt /> },
+  { name: 'Business Process Automation', level: 88, icon: <FaCogs /> },
+  { name: 'Strategic IT Consulting', level: 95, icon: <FaBriefcase /> },
+  { name: 'Executive Leadership', level: 93, icon: <FaUsers /> },
+  { name: 'Server & Data Center Management', level: 90, icon: <FaServer /> },
+  { name: 'Enterprise Network Design', level: 94, icon: <FaNetworkWired /> },
+  { name: 'Custom Software Development', level: 92, icon: <FaLaptopCode /> },
+  { name: 'Client Relationship Management', level: 90, icon: <FaHandshake /> },
+  { name: 'Project Portfolio Management', level: 88, icon: <FaProjectDiagram /> },
+  { name: 'Business Strategy', level: 94, icon: <FaChartLine /> },
+  { name: 'Team Leadership & Growth', level: 92, icon: <FaUsers /> },
+  { name: 'Enterprise Solution Architecture', level: 95, icon: <FaProjectDiagram /> },
+  { name: 'International Business Development', level: 85, icon: <FaGlobe /> },
+  { name: 'Client Satisfaction Management', level: 96, icon: <FaHandshake /> },
+  { name: 'Corporate Communications', level: 90, icon: <FaComments /> },
 ];
 
 const aiSkills = [
-  { name: 'AI-powered chatbots and virtual assistants', level: 80, icon: <FaRobot /> },
-  { name: 'Automated data analysis and reporting', level: 75, icon: <FaChartBar /> },
-  { name: 'AI-driven customer support solutions', level: 80, icon: <FaRobot /> },
-  { name: 'Machine learning integration for business processes', level: 70, icon: <FaCogs /> },
-  { name: 'Natural language processing (NLP) tools', level: 75, icon: <FaRobot /> },
-  { name: 'AI-based diagnostics for hardware/software issues', level: 78, icon: <FaRobot /> },
+  { name: 'Enterprise AI Strategy & Implementation', level: 92, icon: <FaRobot /> },
+  { name: 'Business Intelligence & Analytics Solutions', level: 94, icon: <FaChartBar /> },
+  { name: 'AI-Powered Customer Experience Platforms', level: 90, icon: <FaRobot /> },
+  { name: 'Predictive Maintenance Systems', level: 88, icon: <FaCogs /> },
+  { name: 'Natural Language Processing for Enterprise', level: 86, icon: <FaRobot /> },
+  { name: 'Computer Vision & Image Recognition Solutions', level: 85, icon: <FaRobot /> },
+  { name: 'Machine Learning Operations (MLOps)', level: 89, icon: <FaRobot /> },
+  { name: 'AI Risk Management & Governance', level: 91, icon: <FaShieldAlt /> },
 ];
 
 function SkillBar({ skill }) {
@@ -49,13 +51,13 @@ function AnimatedSkills() {
 
   return (
     <section className="animated-skills">
-      <h2>Skills</h2>
+      <h2>Our Services & Expertise</h2>
       <div className="skills-intro">
-        Explore my top technical skills. Switch between categories to see more!
+        GideonsTechnology Ltd offers a comprehensive range of enterprise technology solutions and services. Explore our expertise areas below.
       </div>
       <div className="skills-tabs">
-        <button className={tab==='core' ? 'active' : ''} onClick={()=>setTab('core')}>Core Skills</button>
-        <button className={tab==='ai' ? 'active' : ''} onClick={()=>setTab('ai')}>AI & Automation</button>
+        <button className={tab==='core' ? 'active' : ''} onClick={()=>setTab('core')}>Enterprise Solutions</button>
+        <button className={tab==='ai' ? 'active' : ''} onClick={()=>setTab('ai')}>AI & Advanced Analytics</button>
       </div>
       <div className="skills-grid">
         {(tab==='core' ? skills : aiSkills).map((skill, idx) => <SkillBar skill={skill} key={idx} />)}
