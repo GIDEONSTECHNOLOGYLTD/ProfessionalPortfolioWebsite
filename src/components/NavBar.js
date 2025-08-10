@@ -4,9 +4,12 @@ import './NavBar.css';
 
 const navLinks = [
   { label: 'Home', href: '#home' },
+  { label: 'Services', href: '#services' },
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
   { label: 'Dashboard', href: '#dashboard' },
+  { label: 'Portal', href: '#portal' },
+  { label: 'Newsletter', href: '#newsletter' },
   { label: 'Contact', href: '#contact' },
 ];
 
