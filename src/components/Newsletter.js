@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaEnvelope, FaCheck, FaNewspaper, FaTrendingUp, FaUsers } from 'react-icons/fa';
+import { FaEnvelope, FaCheck, FaNewspaper, FaChartLine, FaUsers } from 'react-icons/fa';
 import './Newsletter.css';
 
 function Newsletter() {
@@ -31,7 +31,7 @@ function Newsletter() {
 
           <div className="newsletter-benefits">
             <div className="benefit-item">
-              <FaTrendingUp className="benefit-icon" />
+              <FaChartLine className="benefit-icon" />
               <h3>Tech Insights</h3>
               <p>Latest technology trends and industry analysis</p>
             </div>
