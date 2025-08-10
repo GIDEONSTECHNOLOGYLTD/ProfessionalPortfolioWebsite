@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaLinkedin, FaGlobe, FaEnvelope } from 'react-icons/fa';
+import apiService from '../utils/api';
 import './Contact.css';
 
 function Contact() {
@@ -10,26 +11,27 @@ function Contact() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  // Professional contact form endpoint
-  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xrgwrpbv'; // GideonsTechnology contact endpoint
-
   const handleSubmit = async e => {
     e.preventDefault();
-    // Send form data to Formspree
-    const response = await fetch(FORMSPREE_ENDPOINT, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
+    
+    try {
+      const response = await apiService.submitContactForm({
         name: form.name,
         email: form.email,
         message: form.message,
-      }),
-    });
-    if (response.ok) {
-      setSubmitted(true);
-      setForm({ name: '', email: '', message: '' });
-    } else {
-      alert('There was a problem sending your message. Please try again.');
+        subject: 'Website Contact Form',
+        serviceType: 'general_inquiry'
+      });
+      
+      if (response.success) {
+        setSubmitted(true);
+        setForm({ name: '', email: '', message: '' });
+      } else {
+        alert(response.message || 'Failed to send message. Please try again.');
+      }
+    } catch (error) {
+      console.error('Contact form error:', error);
+      alert('Failed to send message. Please try again.');
     }
   };
 

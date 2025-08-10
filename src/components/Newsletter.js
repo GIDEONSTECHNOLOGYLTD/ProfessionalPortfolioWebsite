@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaEnvelope, FaCheck, FaNewspaper, FaChartLine, FaUsers } from 'react-icons/fa';
+import apiService from '../utils/api';
 import './Newsletter.css';
 
 function Newsletter() {
@@ -11,12 +12,21 @@ function Newsletter() {
     e.preventDefault();
     setLoading(true);
     
-    // Simulate API call - replace with actual newsletter service
-    setTimeout(() => {
-      setSubscribed(true);
+    try {
+      const response = await apiService.subscribeNewsletter(email);
+      
+      if (response.success) {
+        setSubscribed(true);
+        setEmail('');
+      } else {
+        alert(response.message || 'Subscription failed. Please try again.');
+      }
+    } catch (error) {
+      console.error('Newsletter subscription error:', error);
+      alert('Subscription failed. Please try again.');
+    } finally {
       setLoading(false);
-      setEmail('');
-    }, 1500);
+    }
   };
 
   return (
