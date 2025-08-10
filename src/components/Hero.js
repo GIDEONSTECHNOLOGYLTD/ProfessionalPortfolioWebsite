@@ -3,11 +3,11 @@ import './Hero.css';
 import avatar from '../avatar.png';
 
 const headlines = [
-  'CEO & Tech Director',
-  'Software Architect',
-  'Solutions Provider',
-  'Digital Transformation Leader',
-  'Enterprise Technology Expert'
+  'Chief Executive Officer',
+  'Technology Director & Founder',
+  'Enterprise Software Architect',
+  'Digital Infrastructure Specialist',
+  'Network Solutions Expert'
 ];
 
 function Hero() {
@@ -128,18 +128,18 @@ function Hero() {
       
       <div className="hero-content">
         <h1 className="hero-name">Gideon Aina</h1>
-        <div className="hero-badge">CEO & Founder • GideonsTechnology Ltd • Nigeria</div>
+        <div className="hero-badge">Chief Executive Officer & Founder • GideonsTechnology Ltd • Nigeria</div>
         <h2 className="hero-animated-headline">
           <span>{typed}</span>
           <span className="hero-cursor">|</span>
         </h2>
-        <p className="hero-intro">Founder and CEO of GideonsTechnology Ltd, a Nigerian tech company providing software and network solutions. Currently working in Ghana on permit, specializing in enterprise technology solutions for businesses across West Africa.</p>
+        <p className="hero-intro">Chief Executive Officer and Founder of GideonsTechnology Ltd, a leading Nigerian technology company specializing in enterprise software development and network infrastructure solutions. Currently expanding operations across West Africa with a focus on digital transformation for businesses and organizations.</p>
         <div className="hero-buttons">
           <a href="/Gideon_Aina_CV.pdf" className="cv-button big-cv-btn" download>
-            <span className="btn-text">Company Profile</span>
-            <span className="btn-icon">📊</span>
+            <span className="btn-text">Download CV</span>
+            <span className="btn-icon">📄</span>
           </a>
-          <a href="#contact" className="hero-contact-btn">Schedule Consultation</a>
+          <a href="#contact" className="hero-contact-btn">Request Consultation</a>
         </div>
       </div>
       

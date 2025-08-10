@@ -10,8 +10,8 @@ function Contact() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  // Formspree endpoint for ceo@gideonstechnology.com (replace with your Formspree endpoint if you register)
-  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xrgwrpbv'; // User's real Formspree endpoint
+  // Professional contact form endpoint
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xrgwrpbv'; // GideonsTechnology contact endpoint
 
   const handleSubmit = async e => {
     e.preventDefault();

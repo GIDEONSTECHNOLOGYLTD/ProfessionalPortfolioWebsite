@@ -1,32 +1,92 @@
-# Gideon Aina - Professional Portfolio
+# GideonsTechnology Ltd - Professional Portfolio
 
-This repository contains the source code for my professional portfolio website, showcasing my experience, projects, and skills as a software and hardware engineer.
+[![Deployment Status](https://img.shields.io/badge/deployment-active-brightgreen)](https://your-portfolio-url.com)
+[![React](https://img.shields.io/badge/React-19.1.0-blue)](https://reactjs.org/)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
-## Features
+Professional portfolio website for Gideon Aina, Chief Executive Officer and Founder of GideonsTechnology Ltd. This modern, responsive web application showcases enterprise technology solutions, software development expertise, and network infrastructure capabilities.
 
-- Modern, responsive design
-- Interactive components and animations
-- Comprehensive display of skills and projects
-- Contact form integration
-- Downloadable CV
-- Network Operations Dashboard demo
+## 🚀 Features
 
-## Technologies Used
+- **Professional Design**: Modern, responsive interface optimized for all devices
+- **Interactive Components**: Smooth animations and engaging user experience
+- **Skills Showcase**: Comprehensive display of technical expertise and certifications
+- **Project Portfolio**: Detailed case studies and technology demonstrations
+- **Network Operations Dashboard**: Live demo of enterprise monitoring solutions
+- **Contact Integration**: Professional contact form with Formspree integration
+- **CV Download**: Multiple format options (PDF, HTML, Markdown)
+- **SEO Optimized**: Enhanced meta tags and social media previews
+- **PWA Ready**: Progressive Web App capabilities
 
-- React
-- CSS3 with custom animations
-- Responsive design principles
-- Formspree for contact form submissions
-- Deployed on Render
+## 🛠️ Technology Stack
 
-## Available Scripts
+### Frontend
+- **React 19.1.0** - Modern component-based architecture
+- **CSS3** - Custom animations and responsive design
+- **React Icons** - Professional iconography
+- **Progressive Web App** - Enhanced user experience
 
-In the project directory, you can run:
+### Backend & Services
+- **Formspree** - Professional contact form handling
+- **Render** - Cloud deployment and hosting
+- **Git** - Version control and collaboration
 
-### `npm start`
+### Development Tools
+- **Node.js** - Development environment
+- **npm** - Package management
+- **ESLint** - Code quality and standards
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js (v18.x or higher)
+- npm or yarn package manager
+- Git for version control
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/personal-website.git
+
+# Navigate to project directory
+cd personal-website
+
+# Install dependencies
+npm install
+
+# Start development server
+npm start
+```
+
+### Available Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm start` | Runs development server at [http://localhost:3000](http://localhost:3000) |
+| `npm run build` | Creates optimized production build |
+| `npm test` | Runs test suite |
+| `npm run eject` | Ejects from Create React App (⚠️ irreversible) |
+
+## 📁 Project Structure
+
+```
+src/
+├── components/          # React components
+│   ├── Hero.js         # Landing section
+│   ├── AnimatedSkills.js # Skills showcase
+│   ├── Projects.js     # Portfolio projects
+│   ├── Contact.js      # Contact form
+│   └── ...            # Other components
+├── App.js              # Main application
+├── App.css            # Global styles
+└── index.js           # Application entry point
+
+public/
+├── index.html         # HTML template
+├── manifest.json      # PWA configuration
+└── Gideon_Aina_CV.*  # CV files (PDF, HTML, MD)
+```
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
